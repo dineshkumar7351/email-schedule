@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Routes, Route, useNavigate, useLocation, Link } from 'react-router-dom';
-import { LogOut, Plus, Calendar, Send, Search, CheckCircle, Mail, MessageSquare } from 'lucide-react';
+import { LogOut, Plus, Calendar, Send, Search, Mail, MessageSquare } from 'lucide-react';
 
 import axios from 'axios';
 import { toast } from 'sonner';
@@ -27,7 +27,7 @@ export default function Dashboard() {
         if (data.success) {
           setUser(data.data);
         }
-      } catch (err) {
+      } catch {
         navigate('/login');
       }
     };
@@ -63,7 +63,7 @@ export default function Dashboard() {
       await api.post('/auth/logout');
       toast.success('Logged out successfully');
       navigate('/login');
-    } catch (err) {
+    } catch {
       toast.error('Failed to logout');
     }
   };

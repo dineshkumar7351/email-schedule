@@ -1,5 +1,3 @@
-import React from 'react';
-import { Mail } from 'lucide-react';
 
 export default function Login() {
   const handleGoogleLogin = () => {
