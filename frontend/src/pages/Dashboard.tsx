@@ -95,7 +95,7 @@ export default function Dashboard() {
         <div className="p-4">
           <button
             onClick={() => setIsComposeOpen(true)}
-            className="w-full bg-[#00a854] hover:bg-[#008f47] text-white font-bold py-3 px-4 rounded-xl flex items-center justify-center gap-2 transition-all shadow-[0_4px_12px_rgba(0,168,84,0.15)] cursor-pointer text-sm"
+            className="w-full bg-[#00a854] hover:bg-[#00c261] active:scale-[0.98] text-white font-bold py-3 px-4 rounded-xl flex items-center justify-center gap-2 transition-all shadow-[0_4px_12px_rgba(0,168,84,0.15)] hover:shadow-[0_4px_18px_rgba(0,168,84,0.3)] cursor-pointer text-sm"
           >
             <Plus className="w-4 h-4" />
             Compose New Email
@@ -106,7 +106,7 @@ export default function Dashboard() {
         <nav className="flex-1 px-4 py-2 space-y-1 overflow-y-auto">
           <Link
             to="/dashboard"
-            className={`flex items-center gap-3 px-4 py-3 rounded-xl font-bold text-sm transition-colors ${
+            className={`flex items-center gap-3 px-4 py-3 rounded-xl font-bold text-sm transition-all duration-200 active:scale-[0.98] hover:pl-5 ${
               location.pathname === '/dashboard'
                 ? 'bg-emerald-50/50 text-[#00a854]'
                 : 'text-gray-600 hover:bg-gray-50'
@@ -117,7 +117,7 @@ export default function Dashboard() {
           </Link>
           <Link
             to="/dashboard/sent"
-            className={`flex items-center gap-3 px-4 py-3 rounded-xl font-bold text-sm transition-colors ${
+            className={`flex items-center gap-3 px-4 py-3 rounded-xl font-bold text-sm transition-all duration-200 active:scale-[0.98] hover:pl-5 ${
               location.pathname === '/dashboard/sent'
                 ? 'bg-emerald-50/50 text-[#00a854]'
                 : 'text-gray-600 hover:bg-gray-50'
